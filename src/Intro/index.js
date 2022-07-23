@@ -24,13 +24,13 @@ function Intro () {
         <Box display='flex' justifyContent='center' marginTop='2%'>
          <Box width='80%'>   
             <PaperForm elevation={3}>
-            <Typography fontFamily='Roboto' variant="h5" component="div" gutterBottom >
-                1. Complete the Form
-            </Typography>
-            <Typography>
-            Wake up will include a link to this URL on the NFT details page so users can get more information. You can link to your own web page.
-            </Typography>
-        </PaperForm>
+                <Typography variant="h5" component="div" gutterBottom >
+                    1. Complete the Form
+                </Typography>
+                <Typography>
+                Wake up will include a link to this URL on the NFT details page so users can get more information. You can link to your own web page.
+                </Typography>
+            </PaperForm>
         </Box>
         </Box>
     );
