@@ -5,7 +5,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 function Header () {
     return (
         <section className='HeaderContainer'>
-            <p className='HeaderOpensea'> SEE ON OPEN SEA</p>
+            <p className='HeaderOpensea'>LOGO</p>
             <div className='connect-wallet-button'>
                 <ConnectButton  showBalance={{ smallScreen: false }}/>
             </div>
