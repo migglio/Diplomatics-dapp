@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import  App from './App';
 import { WagmiConfig } from "wagmi";
-import { darkTheme, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { chains, wagmiClient } from '../src/ConnectWallet/configuration';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

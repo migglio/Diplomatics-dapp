@@ -13,12 +13,11 @@ const PaperForm = styled(Paper)(({ theme }) => ({
     height: '30vh',
   }));
 
-
 function Intro () {
     const contractConfig = {
         addressOrName: '0x746B7D4c3BA8fF0B930F894E7416CaF802CF20Ee',
         contractInterface: contractInterface,
-      };
+    };
 
     return (
         <Box display='flex' justifyContent='center' marginTop='2%'>
@@ -28,7 +27,7 @@ function Intro () {
                     1. Complete the Form
                 </Typography>
                 <Typography>
-                Wake up will include a link to this URL on the NFT details page so users can get more information. You can link to your own web page.
+                    Wake up will include a link to this URL on the NFT details page so users can get more information. You can link to your own web page.
                 </Typography>
             </PaperForm>
         </Box>
