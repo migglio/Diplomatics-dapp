@@ -12,6 +12,7 @@ import Select from '@mui/material/Select';
 import { useAccount, useContractRead, useContractWrite } from 'wagmi';
 import LoadingButton from '@mui/lab/LoadingButton';
 import TextField from '@mui/material/TextField';
+import Tooltip from '@mui/material/Tooltip';
 
 const PaperForm = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -91,16 +92,24 @@ function Step2 () {
                 
                 {diplomaData?.image && 
                 <>
-                <Typography fontFamily='Inter' marginTop='48px' marginBottom='28px' color='rgba(72, 72, 72, 1)' fontWeight={700} variant="h5" gutterBottom >
-                    {diplomaData?.name}
-                </Typography>
+                
+{/*     margin: 93px;
+    background-color: #E4DBFF;
+    border-radius: 10px;
+ */}
+                <Box display='flex' margin='80px' sx={{ backgroundColor: '#E4DBFF',padding: '16px 0px', borderRadius:'10px' }} justifyContent='center' flexDirection='column' alignItems='center'  >
+                    <Typography alignSelf='center' fontFamily='Inter' color='rgba(72, 72, 72, 1)' fontWeight={700} variant="h5" gutterBottom >
+                        {diplomaData?.name}
+                    </Typography>
                     <img className="ImgIPFS" src={`https://gateway.pinata.cloud/ipfs/${diplomaData?.image?.replace('ipfs://','')}`} alt='NFT'/>
-                    <Typography fontFamily='Inter' className="DiplomaDescription">
+                    <Typography marginTop='12px' fontFamily='Inter'>
                         {diplomaData?.description}
                     </Typography>
-                    <Typography fontFamily='Inter' className="AddAddress">
+                </Box>
+                    <Typography fontFamily='Inter' className="AddAddress" gutterBottom>
                         Add recipient address
                     </Typography>
+                    <Tooltip title="You can add more than one wallet if you separate them with a comma.">
                     <TextField
                         multiline
                         style={{width: '500px', marginBottom: '24px', marginTop: '90px'}}
@@ -109,6 +118,7 @@ function Step2 () {
                         value={addresses}
                         onChange={handleChangeTextField}
                     />
+                    </Tooltip>
                     <LoadingButton
                         loading={isMintLoading}
                         className="MintButton"

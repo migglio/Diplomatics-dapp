@@ -13,20 +13,13 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin: 20px 20px 20px 44px;
+    margin: 20px 44px 20px 44px;
     width: 100%;
 }
 
 .ImgIPFS {
     max-width: 220px;
     display: flex;
-    margin-left: 200px;
-}
-
-.DiplomaDescription {
-    position: relative;
-    top: 28px;
-    left: 90px;
 }
 
 .AddAddress {
