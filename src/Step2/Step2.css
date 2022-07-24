@@ -8,30 +8,24 @@
     font-weight: 700;
 }
 
-.FormDiploma {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 20px 44px 20px 44px;
-    width: 100%;
-}
-
 .ImgIPFS {
-    max-width: 220px;
+    max-width: 200px;
     display: flex;
+    position: relative;
+    top: 16px;
 }
 
 .AddAddress {
     position: relative;
-    top: 84px;
-    font-family: 'Inter', sans-serif;
-    font-size: 22px;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 22px !important;
     font-weight: 700 !important;
+    top: 48px;
 }
 
 .MintButton {
     display: flex;
+    top: 40px;
     height: 56px;
     width: 40%;
     max-width: 250px;
@@ -41,4 +35,14 @@
     border: none;
     border-radius: 16px;
     background: linear-gradient(180deg, #8158FC 0%, #5626EE 100%);
+}
+
+.MintButton:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.DiplomaBox {
+    position: relative;
+    margin-top: 40px;
 }

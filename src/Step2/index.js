@@ -78,7 +78,7 @@ function Step2 () {
         <Box display='flex' justifyContent='center' marginTop='2%' marginBottom='2%'>
          <Box width='60%' >   
             <PaperForm elevation={3}>
-                <h2 style={{marginBottom: '16px'}} >
+                <h2 className="MintTitle" >
                     Mint Certificates 
                 </h2>
                 <FormControl >
@@ -92,7 +92,7 @@ function Step2 () {
                         {allDiplomas.map(diploma=><MenuItem value={parseInt(diploma?._hex, 16)}>{parseInt(diploma?._hex, 16)}</MenuItem>)}
                     </Select>
                 </FormControl>
-                <Box >
+                <Box className="DiplomaBox" >
                 
                 {diplomaData?.image && 
                 <>
@@ -101,18 +101,18 @@ function Step2 () {
                         {diplomaData?.name}
                     </Typography>
                     <img className="ImgIPFS" src={`https://gateway.pinata.cloud/ipfs/${diplomaData?.image?.replace('ipfs://','')}`} alt='NFT'/>
-                    <Typography marginTop='12px' fontFamily='Inter'>
+                    <Typography marginTop='32px' fontFamily='Inter'>
                         {diplomaData?.description}
                     </Typography>
                 </Box>
                 <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' width='100%'>
-                    <Typography fontFamily='Inter' fontWeight={700} >
+                    <Typography className="AddAddress" >
                         Add recipient address
                     </Typography>
                     <Tooltip title="You can add more than one wallet if you separate them with a comma.">
                     <TextField
                         multiline
-                        style={{width: '500px', marginBottom: '24px', marginTop: '20px'}}
+                        style={{width: '80%', marginBottom: '24px', marginTop: '60px'}}
                         rows={2}
                         label="Address, address, address..."
                         value={addresses}

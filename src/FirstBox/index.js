@@ -19,7 +19,7 @@ function FirstBox () {
         <Box className="FirstBox">
          <Box className="SecondBox" >   
                 <h2 className="BoxTitle">
-                    Are you a curated institution?
+                    Are you already registered?
                 </h2>
                 <p className="BoxText">
                     Don’t forget to fill the form, every institution has been curated and allowed by the Diplomatics team.
@@ -42,7 +42,7 @@ function FirstBox () {
                     </p>
                 </button>
                 <p className="BoxText2">
-                    You have no need to take care of this if you are already aproved.
+                    You have no need to take care of this if you are already allowed.
                 </p>
         </Box>
         </Box>
