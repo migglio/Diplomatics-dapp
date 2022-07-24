@@ -5,7 +5,12 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 function Header () {
     return (
         <div className='HeaderContainer'>
-            <p className='HeaderOpensea'>LOGO</p>
+            <img 
+                src="diplomatic-logo.png"
+                alt="Diplomatic Logo"
+                className="HeaderLogo"
+            >
+            </img>
             <div className='connect-wallet-button'>
                 <ConnectButton  showBalance={{ smallScreen: false }}/>
             </div>

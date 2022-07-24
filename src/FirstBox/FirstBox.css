@@ -1,0 +1,89 @@
+.Welcome {
+    position: relative;
+    left: 150px;
+    top: 56px;
+    padding: 0px 0px 48px 0px;
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 68px;
+}
+
+.FirstBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}   
+
+.SecondBox {
+    width: 80%;
+    background: #FFFEFD;
+    border-radius: 10px;
+    padding: 80px;
+    border: none;
+}
+
+.BoxTitle {
+    position: relative;
+    margin: 0px 0px 20px 40px;
+    display: flex;
+    justify-content: start;
+    font-size: 20px;
+}
+
+.BoxText {
+    position: relative;
+    margin: 0px 0px 20px 40px;
+    display: flex;
+    justify-content: start;
+}
+
+.BoxText2 {
+    position: relative;
+    margin: 0px 0px 20px 40px;
+    display: flex;
+    justify-content: start;
+}
+
+.IntroContactButton {
+    position: relative;
+    margin: 16px 0px 20px 40px;
+    width: 40%;
+    min-width: 300px;
+    max-width: 450px;
+    height: 110px;
+    background: linear-gradient(0deg, #E4DBFF, #E4DBFF);
+    border-radius: 15px;
+    border: 2px solid rgba(86, 38, 238, 1);
+    display: flex;
+    justify-content: start;
+}
+
+.ButtonImg {
+    position: absolute;
+    left: 10px;
+    top:15px;
+    width: 80px;
+}
+
+.Text1Contact {
+    position: absolute;
+    left: 110px;
+    top: 28px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #8D39F3;
+    display: flex;
+    text-align: left;
+}
+
+.Text2Contact {
+    position: absolute;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+    left: 110px;
+    top: 64px;
+}
+

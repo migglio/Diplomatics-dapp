@@ -12,50 +12,10 @@
     margin-right: 30px
 }
 
-.HeaderOpensea {
+.HeaderLogo {
     display: flex;
+    align-items: center;
     justify-content: start;
-    align-items: center;
+    width: 60px;
     margin-left: 30px;
-    color: white;
-    font-size: 22px;
-    text-decoration: underline;
-}
-
-.HeaderOpensea:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.HeaderWallet:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.HeaderWallet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    margin-right: 20px;
-    width: 40%;
-    max-width: 200px;
-    height: 32px;
-    padding: 16px 14px 14px;
-    font-size: 24px;
-    font-family: 'Bebas Neue', cursive;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #0b0b41, #280f62, #514cd2, #2e1b81, #38084c);
-    background-size: 400% 400%;
-    position: relative;
-    animation: change-wallet 6s ease infinite;
-    box-shadow: 4px 5px 4px 0 #0d022e;
-}
-
-@keyframes change-wallet {
-    0%{background-position: 0 50%;}
-    50%{background-position: 100% 50%;}
-    100%{background-position: 0 50%;}
 }
