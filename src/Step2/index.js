@@ -1,27 +1,28 @@
 import React, { useEffect } from "react";
 import contractInterface from '../contract-abi.json';
 import Paper from '@mui/material/Paper';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import {  useAccount, useContractRead, useContractWrite } from 'wagmi';
+import { useAccount, useContractRead, useContractWrite } from 'wagmi';
 import LoadingButton from '@mui/lab/LoadingButton';
 import TextField from '@mui/material/TextField';
 
 const PaperForm = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
-    textAlign: 'center',
-    padding: '20px'
+    borderRadius: '10px',
+    padding: '80px'
   }));
 
 const contractConfig = {
     addressOrName: '0x746B7D4c3BA8fF0B930F894E7416CaF802CF20Ee',
     contractInterface: contractInterface,
 };
+
 function Step2 () {
     const { address } = useAccount()
     const [diplomaId, setDiplomaId] = React.useState('');
@@ -49,7 +50,7 @@ function Step2 () {
             functionName: 'batchMint',
             args: [ addresses?.replace('\n').split(','), diplomaId] 
         });
-            //args: [ [addresses?.split(',')], diplomaId] 
+
     useEffect(()=>{
         if(data)
             setAllDiplomas(data)
@@ -58,7 +59,8 @@ function Step2 () {
     useEffect(()=>{
         async function fetchData() {
             if(metadataIpfs && diplomaId){
-                const res = await fetch(metadataIpfs).then(response => response.json())
+                console.log({metadataIpfs})
+                const res = await fetch(`${metadataIpfs?.replace('ipfs://','https://gateway.pinata.cloud/ipfs/')}`).then(response => response.json())
                 setDiplomaData(res)
                 console.log({res})
             }
@@ -70,22 +72,20 @@ function Step2 () {
         <Box display='flex' justifyContent='center' marginTop='2%' marginBottom='2%'>
          <Box width='60%'>   
             <PaperForm elevation={3}>
-                <Typography variant="h5" component="div" gutterBottom >
+                <h2 variant="h5" component="div" margin='0px 0px 20px 40px'>
                     Mint Certificates 
-                </Typography>
-                <Typography gutterBottom sx={{marginBottom: 3}}>
+                </h2>
+                <p gutterBottom sx={{ marginBottom: 3 }}>
                     Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum. 
-                </Typography>
+                </p>
                 <Box sx={{ minWidth: 120, width: '100%',display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <FormControl  >
+                <FormControl >
                     <InputLabel id="demo-simple-select-label" gutterBottom>Diploma Id   </InputLabel>
                     <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={diplomaId}
-                    label="Diploma Id"
-                    onChange={handleChange}
-                    sx={{ minWidth: 120, width: '300px' }}
+                        value={diplomaId}
+                        label="Diploma Id"
+                        onChange={handleChange}
+                        sx={{ minWidth: 120, width: '300px' }}
                     >
                         {allDiplomas.map(diploma=><MenuItem value={parseInt(diploma?._hex, 16)}>{parseInt(diploma?._hex, 16)}</MenuItem>)}
                     </Select>
