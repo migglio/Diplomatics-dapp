@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import './Step2.css';
 import contractInterface from '../contract-abi.json';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
@@ -72,11 +73,11 @@ function Step2 () {
         <Box display='flex' justifyContent='center' marginTop='2%' marginBottom='2%'>
          <Box width='60%'>   
             <PaperForm elevation={3}>
-                <h2 variant="h5" component="div" margin='0px 0px 20px 40px'>
+                <h2 className="MintTitle">
                     Mint Certificates 
                 </h2>
                
-                <Box sx={{ minWidth: 120, width: '100%',display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Box className="FormDiploma">
                 <FormControl >
                     <InputLabel id="demo-simple-select-label" gutterBottom>Diploma Id   </InputLabel>
                     <Select
@@ -88,32 +89,33 @@ function Step2 () {
                         {allDiplomas.map(diploma=><MenuItem value={parseInt(diploma?._hex, 16)}>{parseInt(diploma?._hex, 16)}</MenuItem>)}
                     </Select>
                 </FormControl>
-                <Typography marginTop='12px' fontWeight={500} variant="h5" component="div" gutterBottom >
+                <Typography marginTop='48px' marginBottom='48px' color='rgba(72, 72, 72, 1)' fontWeight={500} variant="h5" component="div" gutterBottom >
                     {diplomaData?.name}
                 </Typography>
                 {diplomaData?.image && 
                 <>
-                    <img style={{ maxWidth: '200px'}} src={`https://gateway.pinata.cloud/ipfs/${diplomaData?.image?.replace('ipfs://','')}`}/>
-                    <Typography marginTop='8px' marginBottom='24px' fontWeight={300} variant="h6" component="div" gutterBottom >
+                    <img className="ImgIPFS" src={`https://gateway.pinata.cloud/ipfs/${diplomaData?.image?.replace('ipfs://','')}`}/>
+                    <Typography className="DiplomaDescription">
                         {diplomaData?.description}
                     </Typography>
-                    <Typography marginTop='8px' fontWeight={300} variant="h6" component="div" gutterBottom >
-                        Add recipient Address
+                    <Typography className="AddAddress">
+                        Add recipient address
                     </Typography>
                     <TextField
                         multiline
-                        style={{width: '500px', marginBottom: '24px'}}
-                        rows={4}
-                        label="Address,Address,Address"
+                        style={{width: '500px', marginBottom: '24px', marginTop: '90px'}}
+                        rows={2}
+                        label="Address, address, address..."
                         value={addresses}
                         onChange={handleChangeTextField}
                     />
                     <LoadingButton
+                        className="MintButton"
                         loadingPosition="start"
                         variant="outlined"
                         onClick={()=>{mint(); console.log(addresses.split(','))}}
                     >
-                        Distribute Certificate
+                        Distribute Certificates
                     </LoadingButton>
                 </>}
                 

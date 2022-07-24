@@ -25,29 +25,31 @@
 
 .BoxTitle {
     position: relative;
-    margin: 0px 0px 20px 40px;
+    margin: 0px 20px 20px 40px;
     display: flex;
     justify-content: start;
-    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .BoxText {
     position: relative;
-    margin: 0px 0px 20px 40px;
+    margin: 0px 20px 20px 40px;
     display: flex;
     justify-content: start;
 }
 
 .BoxText2 {
     position: relative;
-    margin: 0px 0px 20px 40px;
+    margin: 0px 20px 20px 40px;
     display: flex;
     justify-content: start;
 }
 
 .IntroContactButton {
     position: relative;
-    margin: 16px 0px 20px 40px;
+    margin: 16px 20px 20px 40px;
     width: 40%;
     min-width: 300px;
     max-width: 450px;

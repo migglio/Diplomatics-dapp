@@ -1,0 +1,54 @@
+.MintTitle {
+    margin: 0px 20px 20px 44px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.FormDiploma {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 20px 20px 20px 44px;
+    width: 100%;
+}
+
+.ImgIPFS {
+    max-width: 220px;
+    display: flex;
+    margin-left: 200px;
+}
+
+.DiplomaDescription {
+    position: relative;
+    top: 28px;
+    left: 90px;
+}
+
+.AddAddress {
+    position: relative;
+    top: 84px;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.MintButton {
+    position: relative;
+    display: flex;
+    top: 20px;
+    left: 190px;
+    height: 56px;
+    width: 40%;
+    max-width: 250px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #8158FC 0%, #5626EE 100%);
+}
