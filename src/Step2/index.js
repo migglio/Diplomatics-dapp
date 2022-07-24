@@ -78,7 +78,7 @@ function Step2 () {
         <Box display='flex' justifyContent='center' marginTop='2%' marginBottom='2%'>
          <Box width='60%' >   
             <PaperForm elevation={3}>
-                <h2 style={{marginBottom: '16px'}} >
+                <h2  style={{marginBottom: '16px', fontFamily:'Inter'}} >
                     Mint Certificates 
                 </h2>
                 <FormControl >
