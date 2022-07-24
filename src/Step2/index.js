@@ -16,8 +16,12 @@ import Tooltip from '@mui/material/Tooltip';
 
 const PaperForm = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: '10px',
-    padding: '80px'
+    padding: '80px',
+    display: 'flex',
+    flexDirection: 'column'
   }));
 
 const contractConfig = {
@@ -72,12 +76,11 @@ function Step2 () {
 
     return (
         <Box display='flex' justifyContent='center' marginTop='2%' marginBottom='2%'>
-         <Box width='60%'>   
+         <Box width='60%' >   
             <PaperForm elevation={3}>
-                <h2 className="MintTitle">
+                <h2 style={{marginBottom: '16px'}} >
                     Mint Certificates 
                 </h2>
-                <Box className="FormDiploma">
                 <FormControl >
                     <InputLabel id="demo-simple-select-label" gutterBottom>Diploma Id</InputLabel>
                     <Select
@@ -89,15 +92,11 @@ function Step2 () {
                         {allDiplomas.map(diploma=><MenuItem value={parseInt(diploma?._hex, 16)}>{parseInt(diploma?._hex, 16)}</MenuItem>)}
                     </Select>
                 </FormControl>
+                <Box >
                 
                 {diplomaData?.image && 
                 <>
-                
-{/*     margin: 93px;
-    background-color: #E4DBFF;
-    border-radius: 10px;
- */}
-                <Box display='flex' margin='80px' sx={{ backgroundColor: '#E4DBFF',padding: '16px 0px', borderRadius:'10px' }} justifyContent='center' flexDirection='column' alignItems='center'  >
+                <Box display='flex'  margin='40px 80px' sx={{ backgroundColor: '#E4DBFF',padding: '16px', borderRadius:'10px',border: '2px solid rgba(86, 38, 238, 1)' }} justifyContent='center' flexDirection='column' alignItems='center'  >
                     <Typography alignSelf='center' fontFamily='Inter' color='rgba(72, 72, 72, 1)' fontWeight={700} variant="h5" gutterBottom >
                         {diplomaData?.name}
                     </Typography>
@@ -106,13 +105,14 @@ function Step2 () {
                         {diplomaData?.description}
                     </Typography>
                 </Box>
-                    <Typography fontFamily='Inter' className="AddAddress" gutterBottom>
+                <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' width='100%'>
+                    <Typography fontFamily='Inter' fontWeight={700} >
                         Add recipient address
                     </Typography>
                     <Tooltip title="You can add more than one wallet if you separate them with a comma.">
                     <TextField
                         multiline
-                        style={{width: '500px', marginBottom: '24px', marginTop: '90px'}}
+                        style={{width: '500px', marginBottom: '24px', marginTop: '20px'}}
                         rows={2}
                         label="Address, address, address..."
                         value={addresses}
@@ -128,6 +128,7 @@ function Step2 () {
                     >
                         Distribute Certificates
                     </LoadingButton>
+                    </Box>
                 </>}
                 
         </Box>
