@@ -76,10 +76,9 @@ function Step2 () {
                 <h2 className="MintTitle">
                     Mint Certificates 
                 </h2>
-               
                 <Box className="FormDiploma">
                 <FormControl >
-                    <InputLabel id="demo-simple-select-label" gutterBottom>Diploma Id   </InputLabel>
+                    <InputLabel id="demo-simple-select-label" gutterBottom>Diploma Id</InputLabel>
                     <Select
                         value={diplomaId}
                         label="Diploma Id"
@@ -89,16 +88,17 @@ function Step2 () {
                         {allDiplomas.map(diploma=><MenuItem value={parseInt(diploma?._hex, 16)}>{parseInt(diploma?._hex, 16)}</MenuItem>)}
                     </Select>
                 </FormControl>
-                <Typography marginTop='48px' marginBottom='48px' color='rgba(72, 72, 72, 1)' fontWeight={500} variant="h5" component="div" gutterBottom >
-                    {diplomaData?.name}
-                </Typography>
+                
                 {diplomaData?.image && 
                 <>
-                    <img className="ImgIPFS" src={`https://gateway.pinata.cloud/ipfs/${diplomaData?.image?.replace('ipfs://','')}`}/>
-                    <Typography className="DiplomaDescription">
+                <Typography fontFamily='Inter' marginTop='48px' marginBottom='28px' color='rgba(72, 72, 72, 1)' fontWeight={700} variant="h5" gutterBottom >
+                    {diplomaData?.name}
+                </Typography>
+                    <img className="ImgIPFS" src={`https://gateway.pinata.cloud/ipfs/${diplomaData?.image?.replace('ipfs://','')}`} alt='NFT'/>
+                    <Typography fontFamily='Inter' className="DiplomaDescription">
                         {diplomaData?.description}
                     </Typography>
-                    <Typography className="AddAddress">
+                    <Typography fontFamily='Inter' className="AddAddress">
                         Add recipient address
                     </Typography>
                     <TextField
@@ -110,6 +110,7 @@ function Step2 () {
                         onChange={handleChangeTextField}
                     />
                     <LoadingButton
+                        loading={isMintLoading}
                         className="MintButton"
                         loadingPosition="start"
                         variant="outlined"
