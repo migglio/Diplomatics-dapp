@@ -75,9 +75,7 @@ function Step2 () {
                 <h2 variant="h5" component="div" margin='0px 0px 20px 40px'>
                     Mint Certificates 
                 </h2>
-                <p gutterBottom sx={{ marginBottom: 3 }}>
-                    Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum. 
-                </p>
+               
                 <Box sx={{ minWidth: 120, width: '100%',display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <FormControl >
                     <InputLabel id="demo-simple-select-label" gutterBottom>Diploma Id   </InputLabel>
