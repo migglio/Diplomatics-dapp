@@ -1,6 +1,7 @@
 .Welcome {
     position: relative;
-    left: 150px;
+    max-width: 500px;
+    left: 290px;
     top: 56px;
     padding: 0px 0px 48px 0px;
     font-weight: 800;
@@ -15,7 +16,7 @@
 }   
 
 .SecondBox {
-    width: 80%;
+    width: 60%;
     background: #FFFEFD;
     border-radius: 10px;
     padding: 80px;
